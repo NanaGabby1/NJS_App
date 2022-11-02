@@ -32,10 +32,7 @@ deploy:
         - image: cimg/deploy:2022.10
     steps:
         - checkout
-        - run:
-            name: Deploy Main to Heroku
-            command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
+        - run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
 
 
 workflows:
